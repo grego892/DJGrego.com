@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>dBird</title>
+</head>
+
+<body>
+    <br>
+    <select id="birdd" name="birdd" onchange="getBirds();">
+        <option value="US-TX-245" selected="selected">Jefferson County</option>
+        <option value="L158397">Sabine Woods</option>
+        <option value="L1076700">Cattail Marsh</option>
+        <option value="L129098">High Island--Smith Oaks Sanctuary</option>
+        <option value="L297250">High Island--Hooks Woods Sanctuary</option>
+        <option value="L209616">High Island--Boy Scout Woods</option>
+        <option value="US-TX">Texas</option>
+        <option value="US-LA">Louisiana</option>
+    </select>
+    <br><br>
+
+    <div id="output"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

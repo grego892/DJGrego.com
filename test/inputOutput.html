@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TestInmput</title>
+</head>
+
+<body>
+    <p>Enter yo damn info, fool !!</p>
+    First name: <input id="first_name">
+    Last name: <input id="last_name">
+    <button id="say">Say hi!</button>
+
+    <div id="result"></div>
+
+    <script>
+        function say_hi() {
+            var fname = document.getElementById('first_name').value;
+            var lname = document.getElementById('last_name').value;
+
+            var html = 'Hello <b>' + fname + '</b> ' + lname;
+
+            document.getElementById('result').innerHTML = html;
+        }
+
+        document.getElementById('say').addEventListener('click', say_hi);
+    </script>
+</body>
+
+</html>
