@@ -1,5 +1,3 @@
-
-
 let data = [];
 let x = "";
 function getBirds(){
