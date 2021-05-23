@@ -1,0 +1,34 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: 1.5fr 0.7fr 0.5fr 0.3fr 1.7fr;
+    grid-template-rows: 20px 0.2fr 1.1fr 3.7fr 0.4fr 0.4fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "station-callLetters current-date current-date current-date current-date"
+      "now-playing now-playing current-time current-time hotKeys"
+      "now-playing now-playing station-logo station-logo hotKeys"
+      "log log log log-nav hotKeys"
+      "log log log log-nav hotKey-nav"
+      "bottom bottom bottom bottom bottom";
+  }
+  
+  .station-callLetters { grid-area: station-callLetters; }
+  
+  .current-date { grid-area: current-date; }
+  
+  .current-time { grid-area: current-time; }
+  
+  .now-playing { grid-area: now-playing; }
+  
+  .station-logo { grid-area: station-logo; }
+  
+  .log-nav { grid-area: log-nav; }
+  
+  .bottom { grid-area: bottom; }
+  
+  .log { grid-area: log; }
+  
+  .hotKey-nav { grid-area: hotKey-nav; }
+  
+  .hotKeys { grid-area: hotKeys; }
+  
