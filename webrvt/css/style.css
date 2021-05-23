@@ -7,7 +7,7 @@ html, body {
 .grid-container {
     display: grid;
     grid-template-columns: 17.5vw 17vw 32vw 3vw 6vw 23vw;
-    grid-template-rows: 20px 22px 16vh 20px 64vh 6vh 7vh;
+    grid-template-rows: 20px 22px 16vh 20px 40vh 8vh 20vh 7vh;
     gap: 0px 0px;
     grid-template-areas:
       "station-callLetters station-callLetters current-date current-date current-date current-date"
@@ -16,7 +16,8 @@ html, body {
       "log-name airDate airDate airDate airDate hotKeys"
       "log log log log log-nav hotKeys"
       "log log log log log-nav hotKey-nav"
-      "bottom bottom bottom bottom bottom bottom";
+      "vtrack-area vtrack-area vtrack-area vtrack-area vtrack-area vtrack-area"
+      "bottom bottom bottom bottom bottom-right bottom-right";
 }
   
 .station-callLetters {
@@ -31,7 +32,6 @@ html, body {
 
 .now-playing {
     grid-area: now-playing;
-    border: #fff dotted 1px;
     display: grid;
 }
 
@@ -74,7 +74,6 @@ html, body {
 
 .log {
     grid-area: log;
-    border: #fff dotted 1px;
     display: grid;
     grid-template-rows: auto;
 }
@@ -112,18 +111,60 @@ html, body {
 
 .hotKey-nav {
     grid-area: hotKey-nav;
+    display: grid;
+    grid-auto-flow: column;
+}
 
+.hotKey-nav > button {
+    background-image: linear-gradient(#4265ff, #0505aa);
+    color: white;
+    border-radius: 8px;
+    min-width: 10px;
+    max-width: 80px;
+}
+
+.vtrack-area {
+    grid-area: vtrack-area;
+    display: grid;
+    grid-template-columns: auto;
+    margin-bottom: 2%;
+}
+
+.vtrack-area > button {
+    color: #fff;
+    background-color: #000;
+    outline: ;
+    border: rgb(192, 191, 191) solid .5px;
 }
 
 .bottom {
     grid-area: bottom;
-    display: inline;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    background-image: linear-gradient(#636363, #000);
+}
+
+.bottom-right {
+    grid-area: bottom-right;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    background-image: linear-gradient(#636363, #000);
 }
 
 .bottom > button {
-    background-color: chartreuse;
+    background-image: linear-gradient(#43ff43, hsl(120, 77%, 39%));
     border-radius: 8px;
-    height: 8vh;
+    min-width: 70px;
+    max-width: 80px;
+}
+
+.bottom-right > button {
+    background-image: linear-gradient(#43ff43, hsl(120, 77%, 39%));
+    border-radius: 8px;
+    min-width: 80px;
+    
 }
 
 #right-button {
